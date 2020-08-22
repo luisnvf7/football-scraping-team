@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -40,9 +37,8 @@ for tr in tbody_tr:
             nacionalidad = td.find('img')["alt"]
             array.append({
                 "nombre": nombre,
-                "edad": edad,
+                "año/edad": edad,
                 "nacionalidad": nacionalidad
             })
 
 print(array)
->>>>>>> Luis
