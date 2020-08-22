@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< Updated upstream
   <component name="ChangeListManager">
     <list default="true" id="37ca74b6-46de-490c-b8df-62497417a54a" name="Default Changelist" comment="" />
+=======
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41c0f953-b5d0-41e5-9ca4-7df6c27f93cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +35,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> Stashed changes
   <component name="RunManager">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="football-scraping-team" />
@@ -39,6 +67,7 @@
       </list>
     </recent_temporary>
   </component>
+<<<<<<< Updated upstream
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -62,5 +91,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598068485209" />
+=======
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1345" height="222" key="GridCell.Tab.0.bottom" timestamp="1598068319783">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="222" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598068319783" />
+    <state width="1345" height="222" key="GridCell.Tab.0.center" timestamp="1598068319783">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="222" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1598068319783" />
+    <state width="1345" height="222" key="GridCell.Tab.0.left" timestamp="1598068319783">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="222" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1598068319783" />
+    <state width="1345" height="222" key="GridCell.Tab.0.right" timestamp="1598068319783">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="222" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1598068319783" />
+>>>>>>> Stashed changes
   </component>
 </project>

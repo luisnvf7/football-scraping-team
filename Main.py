@@ -1,15 +1,14 @@
-
 import requests
 from bs4 import BeautifulSoup
 
 headers = {'User-Agent':
            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'}
 
-page = "https://www.transfermarkt.es/paris-saint-germain-fc/kader/verein/583/saison_id/2019/plus/1"
-pageTree = requests.get(page, headers=headers)
-pageSoup = BeautifulSoup(pageTree.content, 'html.parser')
+url = "https://www.transfermarkt.es/paris-saint-germain-fc/kader/verein/583/saison_id/2019/plus/1"
+source = requests.get(url, headers=headers)
+soup = BeautifulSoup(source.content, 'html.parser')
 
-table = pageSoup.find('table', class_="items")
+table = soup.find('table', class_="items")
 
 tr = table.find('tr')
 
@@ -27,7 +26,7 @@ array = []
 for tr in tbody_tr:
     for td in tr.find_all("td", class_=True)[1:]:
         if td["class"] == ['posrela']:
-            print(td.find('a', class_="spielprofil_tooltip").get_text())
-            array.append(td.find('a', class_="spielprofil_tooltip").get_text())
+            table_td = td.find('table', class_="inline-table")
+            for tbody in table_td.find_all('tr'):
+                
 
-print(array)
