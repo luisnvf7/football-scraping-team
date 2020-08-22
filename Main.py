@@ -35,10 +35,13 @@ for tr in tbody_tr:
             edad = td.text
         elif td.find('img', class_="flaggenrahmen"):
             nacionalidad = td.find('img')["alt"]
+        elif td.text.endswith("m"):
+            estatura = td.text.replace("m", "").strip()
             array.append({
                 "nombre": nombre,
                 "año/edad": edad,
-                "nacionalidad": nacionalidad
+                "nacionalidad": nacionalidad,
+                "estatura": estatura
             })
-
+            
 print(array)
