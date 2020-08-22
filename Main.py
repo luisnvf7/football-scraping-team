@@ -12,5 +12,4 @@ table = soup.find('table', class_='items')
 
 tbody_table = table.find('tbody')
 
-for td in tbody_table.find_all('td'):
-    print(td.text)
+for td in tbody_table.find_all('td')
