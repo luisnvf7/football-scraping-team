@@ -77,22 +77,15 @@ for tr in tbody_tr:
         if td == 2:
             print(tr.find_all('td', class_='zentriert')[td].img["title"])
         elif td == 6:
-<<<<<<< Updated upstream
             if tr.find_all('td', class_='zentriert')[td].find('img'):
                 print(tr.find_all('td', class_='zentriert')[td].find('img')["alt"])
             else:
-<<<<<<< HEAD
-                print(tr.find_all('td', class_='zentriert')[td])
-=======
-            print(tr.find_all('td', class_='zentriert')[td].a.img['alt'])
->>>>>>> Stashed changes
-=======
                 print("-")
->>>>>>> Gustavo
         else:
             print(tr.find_all('td', class_='zentriert')[td].text.strip())
     for td in tr.find_all('td', class_='rechts hauptlink'):
         print(td.text.strip())
+        print('')
 
 
 
