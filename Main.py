@@ -10,6 +10,9 @@ soup = BeautifulSoup(source.content, 'html.parser')
 
 table = soup.find('table', class_='items')
 
+tr_table = table.find('thead')
 
+for th in tr_table.find_all('th'):
+    print(th.text)
             
 
