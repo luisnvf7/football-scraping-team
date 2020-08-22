@@ -83,6 +83,8 @@ for tr in tbody_tr:
                 print(tr.find_all('td', class_='zentriert')[td].find('img')["alt"])
             else:
                 print("-")
+        elif td == 7:
+            print(tr.find_all('td', class_='zentriert')[td].text.strip().replace(".", "/"))
         else:
             print(tr.find_all('td', class_='zentriert')[td].text.strip())
     for td in tr.find_all('td', class_='rechts hauptlink'):
