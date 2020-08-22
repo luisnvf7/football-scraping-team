@@ -28,6 +28,7 @@ pie = []
 fecha_fichado = []
 club_anterior = []
 fecha_contrato = []
+valor_jugador = []
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
@@ -53,16 +54,14 @@ for tr in tbody_tr:
             if tr.find_all('td', class_='zentriert')[td].find('img'):
                 club_anterior.append(tr.find_all('td', class_='zentriert')[td].find('img')["alt"])
             else:
-                print("-")
+                club_anterior.append("-")
         elif td == 7:
             fecha_contrato.append(tr.find_all('td', class_='zentriert')[td].text.strip().replace(".", "/"))
-        else:
-            print("-")
     for td in tr.find_all('td', class_='rechts hauptlink'):
         if "mill" in td.text:
-            print(td.text.split(",")[0] + ".000.000")
+            valor_jugador.append(td.text.split(",")[0] + ".000.000")
         elif "miles" in td.text:
-            print(td.text.split(" ")[0] + ".000")
+            valor_jugador.append(td.text.split(" ")[0] + ".000")
         print("")
 
 print(str((datetime.strptime("2021-10-5", "%Y-%m-%d") - datetime.strptime("2019-10-5", "%Y-%m-%d"))).split(" ")[0])
@@ -76,4 +75,5 @@ print(pie)
 print(fecha_fichado)
 print(club_anterior)
 print(fecha_contrato)
+print(valor_jugador)
 
