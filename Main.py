@@ -25,6 +25,7 @@ posicion = []
 fecha_edad = []
 pais_nacimiento = []
 altura = []
+pie = []
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
@@ -42,6 +43,8 @@ for tr in tbody_tr:
             pais_nacimiento.append(tr.find_all('td', class_='zentriert')[td].img["title"])
         elif td == 3:
             altura.append(tr.find_all('td', class_='zentriert')[td].text.replace("m", "").strip())
+        elif td == 4:
+            pie.append(tr.find_all('td', class_='zentriert')[td].text.strip())
         elif td == 6:
             if tr.find_all('td', class_='zentriert')[td].find('img'):
                 print(tr.find_all('td', class_='zentriert')[td].find('img')["alt"])
@@ -65,3 +68,4 @@ print(posicion)
 print(fecha_edad)
 print(pais_nacimiento)
 print(altura)
+print(pie)
