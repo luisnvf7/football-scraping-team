@@ -13,8 +13,7 @@ table = soup.find('table', class_='items')
 tbody_table = table.find('tbody')
 
 for td in tbody_table.find_all('td'):
-    if td['class'] == ['hauptlink']:
-        print(td.text)
+    
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
