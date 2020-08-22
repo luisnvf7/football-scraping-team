@@ -61,5 +61,14 @@ for tr in tbody_tr:
                 "valor": valor
             })
 
-print(array)
+nombres = []
+edad = []
+
+for tr in tbody_tr:
+    for td in range(1, len(tr.find_all("td"))):
+        if td == 1:
+            for td_name in tr.find_all("td")[td].find_all("td", class_="hauptlink"):
+                nombres.append(td_name.find("a").get_text())
+
+print(nombres)
 
