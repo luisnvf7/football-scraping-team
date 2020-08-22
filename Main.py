@@ -27,7 +27,7 @@ array = []
 for tr in tbody_tr:
     for td in tr.find_all("td", class_=True)[1:]:
         if td["class"] == ['posrela']:
-            print(td.find("span", class_="hide-for-small").find('a').get_text())
-            array.append(td.find("span", class_="hide-for-small").find('a').get_text())
+            print(td.find('a', class_="spielprofil_tooltip").get_text())
+            array.append(td.find('a', class_="spielprofil_tooltip").get_text())
 
 print(array)
