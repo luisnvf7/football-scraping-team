@@ -13,5 +13,5 @@ table = soup.find('table', class_='items')
 tbody_table = table.find('tbody')
 
 for td in tbody_table.find_all('td'):
-    if td['class'] == 'hauptlink':
+    if td['class'] == ['hauptlink']:
         print(td.text)
