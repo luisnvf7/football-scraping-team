@@ -10,7 +10,7 @@ soup = BeautifulSoup(source.content, 'html.parser')
 
 table = soup.find('table', class_='items')
 
-tr_table = table.find('thead')
+tbody_table = table.find('tbody')
 
-for th in tr_table.find_all('th'):
-    
+for td in tbody_table.find_all('td'):
+    print(td.text)
