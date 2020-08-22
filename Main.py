@@ -28,6 +28,7 @@ array = []
 
 nombre = ""
 edad = ""
+nacionalidad = ""
 
 for tr in tbody_tr:
     for td in tr.find_all("td", class_=True)[1:]:
@@ -35,9 +36,12 @@ for tr in tbody_tr:
             nombre = td.find('a', class_="spielprofil_tooltip").get_text()
         elif td["class"] == ['zentriert'] and ")" in td.text:
             edad = td.text
+        elif td.find('img', class_="flaggenrahmen"):
+            nacionalidad = td.find('img')["alt"]
             array.append({
-                "nombre" : nombre,
-                "edad" : edad
+                "nombre": nombre,
+                "edad": edad,
+                "nacionalidad": nacionalidad
             })
 
 print(array)
