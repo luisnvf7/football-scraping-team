@@ -24,6 +24,7 @@ jugadores = []
 posicion = []
 fecha_edad = []
 pais_nacimiento = []
+altura = []
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
@@ -40,7 +41,7 @@ for tr in tbody_tr:
         if td == 2:
             pais_nacimiento.append(tr.find_all('td', class_='zentriert')[td].img["title"])
         elif td == 3:
-            print(tr.find_all('td', class_='zentriert')[td].text.replace("m", "").strip())
+            altura.append(tr.find_all('td', class_='zentriert')[td].text.replace("m", "").strip())
         elif td == 6:
             if tr.find_all('td', class_='zentriert')[td].find('img'):
                 print(tr.find_all('td', class_='zentriert')[td].find('img')["alt"])
@@ -63,3 +64,4 @@ print(jugadores)
 print(posicion)
 print(fecha_edad)
 print(pais_nacimiento)
+print(altura)
