@@ -4,7 +4,6 @@ import pandas as pd
 
 from datetime import datetime
 
-
 headers = {'User-Agent':
            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'}
 
@@ -27,6 +26,8 @@ pais_nacimiento = []
 altura = []
 pie = []
 fecha_fichado = []
+club_anterior = []
+fecha_contrato = []
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
@@ -50,13 +51,13 @@ for tr in tbody_tr:
             fecha_fichado.append(tr.find_all('td', class_='zentriert')[td].text.strip())
         elif td == 6:
             if tr.find_all('td', class_='zentriert')[td].find('img'):
-                print(tr.find_all('td', class_='zentriert')[td].find('img')["alt"])
+                club_anterior.append(tr.find_all('td', class_='zentriert')[td].find('img')["alt"])
             else:
                 print("-")
         elif td == 7:
-            print(tr.find_all('td', class_='zentriert')[td].text.strip().replace(".", "/"))
+            fecha_contrato.append(tr.find_all('td', class_='zentriert')[td].text.strip().replace(".", "/"))
         else:
-            print(tr.find_all('td', class_='zentriert')[td].text.strip())
+            print("-")
     for td in tr.find_all('td', class_='rechts hauptlink'):
         if "mill" in td.text:
             print(td.text.split(",")[0] + ".000.000")
@@ -73,3 +74,6 @@ print(pais_nacimiento)
 print(altura)
 print(pie)
 print(fecha_fichado)
+print(club_anterior)
+print(fecha_contrato)
+
