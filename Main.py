@@ -13,53 +13,9 @@ table = soup.find('table', class_="items")
 
 tr = table.find('tr')
 
-players_info = {}
-
-for th in tr.find_all("th")[1:]:
-    players_info[th.text] = ""
-
 tbody = table.find("tbody")
 
 tbody_tr = tbody.find_all("tr")
-
-array = []
-
-nombre = ""
-edad = ""
-nacionalidad = ""
-estatura = ""
-antes = ""
-valor = ""
-
-for tr in tbody_tr:
-    for td in tr.find_all("td", class_=True)[1:]:
-        if td["class"] == ['posrela']:
-            nombre = td.find('a', class_="spielprofil_tooltip").get_text()
-        elif td["class"] == ['zentriert'] and ")" in td.text:
-            edad = td.text
-        elif td.find('img', class_="flaggenrahmen"):
-            nacionalidad = td.find('img')["alt"]
-        elif td.text.endswith("m"):
-            estatura = td.text.replace("m", "").strip()
-        elif td.find('a', class_="vereinprofil_tooltip"):
-            antes = td.find('img')["alt"]
-        elif td["class"] == ["rechts", 'hauptlink']:
-            if "mill" in td.text:
-                valor = td.text.split(",")
-                valor = valor[0] + ".000.000"
-            elif "miles" in td.text:
-                valor = td.text.split(" ")
-                valor = valor[0] + ".000"
-            else:
-                valor = td.text
-            array.append({
-                "nombre": nombre,
-                "año/edad": edad,
-                "nacionalidad": nacionalidad,
-                "estatura": estatura,
-                "antes": antes,
-                "valor": valor
-            })
 
 nombres = []
 posicion = []
@@ -75,7 +31,7 @@ for tr in tbody_tr:
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all('td', class_='zentriert'))):
         if td == 2:
-           print( tr.find_all('td', class_='zentriert')[td].img["title"])
+            print(tr.find_all('td', class_='zentriert')[td].img["title"])
         elif td == 3:
             print(tr.find_all('td', class_='zentriert')[td].text.replace("m", "").strip())
         elif td == 6:
@@ -89,8 +45,8 @@ for tr in tbody_tr:
             print(tr.find_all('td', class_='zentriert')[td].text.strip())
     for td in tr.find_all('td', class_='rechts hauptlink'):
         if "mill" in td.text:
-            print(td.text.split(",")[0] +".000.000")
+            print(td.text.split(",")[0] + ".000.000")
         elif "miles" in td.text:
-            print(td.text.split(" ")[0] +".000")
+            print(td.text.split(" ")[0] + ".000")
         print("")
 
