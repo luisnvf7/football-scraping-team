@@ -26,6 +26,8 @@ array = []
 nombre = ""
 edad = ""
 nacionalidad = ""
+estatura = ""
+antes = ""
 
 for tr in tbody_tr:
     for td in tr.find_all("td", class_=True)[1:]:
@@ -37,14 +39,15 @@ for tr in tbody_tr:
             nacionalidad = td.find('img')["alt"]
         elif td.text.endswith("m"):
             estatura = td.text.replace("m", "").strip()
-        elif "derecho" in td.text or "izquierdo" in td.text or "-" == td.text:
-            pie = td.text
+        elif td.find('a', class_="vereinprofil_tooltip"):
+            antes = td.find('img')["alt"]
             array.append({
                 "nombre": nombre,
                 "año/edad": edad,
                 "nacionalidad": nacionalidad,
                 "estatura": estatura,
-                "pie": pie
+                "antes": antes
             })
 
 print(array)
+
