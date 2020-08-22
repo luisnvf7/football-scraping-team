@@ -24,10 +24,18 @@ tbody_tr = tbody.find_all("tr")
 
 array = []
 
+nombre = ""
+edad = ""
+
 for tr in tbody_tr:
     for td in tr.find_all("td", class_=True)[1:]:
         if td["class"] == ['posrela']:
-            print(td.find('a', class_="spielprofil_tooltip").get_text())
-            array.append(td.find('a', class_="spielprofil_tooltip").get_text())
+            nombre = td.find('a', class_="spielprofil_tooltip").get_text()
+        elif td["class"] == ['zentriert'] and ")" in td.text:
+            edad = td.text
+            array.append({
+                "nombre" : nombre,
+                "edad" : edad
+            })
 
 print(array)
