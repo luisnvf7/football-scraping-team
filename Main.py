@@ -88,8 +88,9 @@ for tr in tbody_tr:
         else:
             print(tr.find_all('td', class_='zentriert')[td].text.strip())
     for td in tr.find_all('td', class_='rechts hauptlink'):
-        print(td.text.strip())
+        if "mill" in td.text:
+            print(td.text.split(",")[0] +".000.000")
+        elif "miles" in td.text:
+            print(td.text.split(" ")[0] +".000")
         print("")
-
-
 
