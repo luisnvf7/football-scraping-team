@@ -73,8 +73,13 @@ for tr in tbody_tr:
                     posicion.append(td_position.text)
 
 for tr in tbody_tr:
-    for td in tr.find_all('td', class_='zentriert'):
-        print(td.text.strip())
+    for td in range(1, len(tr.find_all('td', class_='zentriert'))):
+        if td == 2:
+           print( tr.find_all('td', class_='zentriert')[td].img["title"])
+        elif td == 6:
+            print(tr.find_all('td', class_='zentriert')[td].a)
+        else:
+            print(tr.find_all('td', class_='zentriert')[td].text.strip())
     for td in tr.find_all('td', class_='rechts hauptlink'):
         print(td.text.strip())
         
