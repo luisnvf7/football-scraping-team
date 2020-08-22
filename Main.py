@@ -28,5 +28,5 @@ for tr in tbody_tr:
         if td["class"] == ['posrela']:
             table_td = td.find('table', class_="inline-table")
             for tbody in table_td.find_all('tr'):
-
+            
 
