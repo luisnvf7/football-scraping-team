@@ -63,13 +63,20 @@ for tr in tbody_tr:
 
 nombres = []
 posicion = []
-edad = []
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
         if td == 1:
             for td_name in tr.find_all("td")[td].find_all("td", class_="hauptlink"):
                 nombres.append(td_name.find("a").get_text())
-                posicion = td_name.find('tr')
-                print(posicion)
+                for td_position in tr.find_all('td')[td].find_all('tr')[1:]:
+                    posicion.append(td_position.text)
+
+for tr in tbody_tr:
+    for td in tr.find_all('td', class_='zentriert'):
+        print(td.text.strip())
+    for td in tr.find_all('td', class_='rechts hauptlink'):
+        print(td.text.strip())
+        
+
 
