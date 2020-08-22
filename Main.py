@@ -63,27 +63,27 @@ for tr in tbody_tr:
             valor_jugador.append(td.text.split(",")[0] + ".000.000")
         elif "miles" in td.text:
             valor_jugador.append(td.text.split(" ")[0] + ".000")
-        print("")
-
-print(str((datetime.strptime("2021-10-5", "%Y-%m-%d") - datetime.strptime("2019-10-5", "%Y-%m-%d"))).split(" ")[0])
+        else:
+            valor_jugador.append('-')
 
 for num in range(0, len(fecha_fichado)):
-    print(num)
     if fecha_fichado[num] == "-":
-        dias_restantes.append("-")
+        dias_restantes.append("")
     else:
         dias_restantes.append(str((datetime.strptime(fecha_contrato[num].replace("/", "-"), "%d-%m-%Y") - datetime.strptime(fecha_fichado[num].replace("/", "-"), "%d-%m-%Y"))).split(" ")[0])
 
+players_info = pd.DataFrame({
+    'jugadores': jugadores,
+    'posicion': posicion,
+    'nacido/edad': fecha_edad,
+    'pais_nacimiento': pais_nacimiento,
+    'altura': altura,
+    'pie': pie,
+    'fichado': fecha_fichado,
+    'antes': club_anterior,
+    'contrato_hasta': fecha_contrato,
+    'dias_restantes': dias_restantes,
+    'valor_mercado': valor_jugador
+})
 
-print(jugadores)
-print(posicion)
-print(fecha_edad)
-print(pais_nacimiento)
-print(altura)
-print(pie)
-print(fecha_fichado)
-print(club_anterior)
-print(fecha_contrato)
-print(valor_jugador)
-print(dias_restantes)
-
+players_info.to_csv('players_data.csv')

@@ -1,0 +1,37 @@
+,jugadores,posicion,nacido/edad,pais_nacimiento,altura,pie,fichado,antes,contrato_hasta,dias_restantes,valor_mercado
+0,Alphonse Areola,Portero,27/02/1993 (27),Francia,"1,95",derecho,01/07/2010,FC Paris Saint-Germain U19,30/06/2023,4747,13.000.000
+1,Keylor Navas,Portero,15/12/1986 (33),Costa Rica,"1,85",derecho,02/09/2019,Real Madrid CF,30/06/2023,1397,8.000.000
+2,Sergio Rico,Portero,01/09/1993 (26),España,"1,95",derecho,01/09/2019,Sevilla FC,31/08/2020,365,8.000.000
+3,Marcin Bulka,Portero,04/10/1999 (20),Polonia,"1,99",derecho,06/07/2019,Chelsea FC U23,30/06/2021,725,900.000
+4,Denis Franchi,Portero,22/10/2002 (17),Italia,,-,-,-,30/06/2022,,250.000
+5,Garissone Innocent,Portero,16/04/2000 (20),Francia,"1,92",derecho,01/07/2019,FC Paris Saint-Germain U19,30/06/2023,1460,150.000
+6,Marquinhos,Defensa central,14/05/1994 (26),Brasil,"1,83",derecho,19/07/2013,AS Roma,30/06/2024,3999,52.000.000
+7,Presnel Kimpembe,Defensa central,13/08/1995 (25),Francia,"1,89",izquierdo,01/07/2015,FC Paris Saint-Germain B,30/06/2024,3287,28.000.000
+8,Abdou Diallo,Defensa central,04/05/1996 (24),Francia,"1,87",izquierdo,16/07/2019,Borussia Dortmund,30/06/2024,1811,28.000.000
+9,Thiago Silva,Defensa central,22/09/1984 (35),Brasil,"1,83",derecho,14/07/2012,AC Milan,31/08/2020,2970,4.000.000
+10,Loïc Mbe Soh,Defensa central,13/06/2001 (19),Francia,"1,87",derecho,01/07/2019,FC Paris Saint-Germain U19,30/06/2021,730,4.000.000
+11,Timothée Pembélé,Defensa central,09/09/2002 (17),Francia,"1,82",derecho,01/07/2020,FC Paris Saint-Germain U19,30/06/2021,364,500.000
+12,El Chadaille Bitshiabu,Defensa central,16/05/2005 (15),Francia,"1,96",izquierdo,-,-,30/06/2023,,-
+13,Juan Bernat,Lateral izquierdo,01/03/1993 (27),España,"1,70",izquierdo,31/08/2018,Bayern Múnich,30/06/2021,1034,16.000.000
+14,Layvin Kurzawa,Lateral izquierdo,04/09/1992 (27),Francia,"1,82",izquierdo,27/08/2015,AS Mónaco,30/06/2024,3230,12.000.000
+15,Mitchel Bakker,Lateral izquierdo,20/06/2000 (20),Países Bajos,"1,85",izquierdo,01/07/2019,Ajax Amsterdam B,30/06/2023,1460,900.000
+16,Thilo Kehrer,Lateral derecho,21/09/1996 (23),Alemania,"1,86",derecho,16/08/2018,FC Schalke 04,30/06/2023,1779,28.000.000
+17,Colin Dagba,Lateral derecho,06/09/1998 (21),Francia,"1,70",derecho,01/07/2018,FC Paris Saint-Germain B,30/06/2024,2191,16.000.000
+18,Édouard Michut,Centrocampista,04/03/2003 (17),Francia,"1,78",derecho,-,-,30/06/2023,,-
+19,Idrissa Gueye,Pivote,26/09/1989 (30),Senegal,"1,74",derecho,30/07/2019,Everton FC,30/06/2023,1431,24.000.000
+20,Leandro Paredes,Pivote,29/06/1994 (26),Argentina,"1,80",derecho,29/01/2019,Zenit de San Petersburgo,30/06/2023,1613,20.000.000
+21,Abdoulaye Kamara,Pivote,06/11/2004 (15),Guinea,,derecho,-,-,-,,-
+22,Marco Verratti,Mediocentro,05/11/1992 (27),Italia,"1,65",derecho,18/07/2012,Delfino Pescara 1936,30/06/2024,4365,60.000.000
+23,Ander Herrera,Mediocentro,14/08/1989 (31),España,"1,82",derecho,04/07/2019,Manchester United,30/06/2024,1823,16.000.000
+24,Kays Ruiz-Atil,Mediocentro,26/08/2002 (17),Marruecos,,derecho,01/07/2020,FC Paris Saint-Germain U19,30/06/2021,364,250.000
+25,Xavi Simons,Mediocentro,21/04/2003 (17),Países Bajos,,derecho,-,-,30/06/2022,,-
+26,Julian Draxler,Mediocentro ofensivo,20/09/1993 (26),Alemania,"1,87",derecho,03/01/2017,VfL Wolfsburgo,30/06/2021,1639,24.000.000
+27,Neymar,Extremo izquierdo,05/02/1992 (28),Brasil,"1,75",derecho,03/08/2017,FC Barcelona,30/06/2022,1792,128.000.000
+28,Jesé,Extremo izquierdo,26/02/1993 (27),España,"1,78",derecho,08/08/2016,Real Madrid CF,30/06/2021,1787,3.000.000
+29,Ángel Di María,Extremo derecho,14/02/1988 (32),Argentina,"1,80",izquierdo,06/08/2015,Manchester United,30/06/2021,2155,32.000.000
+30,Pablo Sarabia,Extremo derecho,11/05/1992 (28),España,"1,74",izquierdo,02/07/2019,Sevilla FC,30/06/2024,1825,28.000.000
+31,Kylian Mbappé,Delantero centro,20/12/1998 (21),Francia,"1,78",derecho,01/07/2018,AS Mónaco,30/06/2022,1460,180.000.000
+32,Mauro Icardi,Delantero centro,19/02/1993 (27),Argentina,"1,81",derecho,01/07/2020,Inter de Milán,30/06/2024,1460,60.000.000
+33,Eric Maxim Choupo-Moting,Delantero centro,23/03/1989 (31),Camerún,"1,91",derecho,31/08/2018,Stoke City,31/08/2020,731,4.000.000
+34,Arnaud Kalimuendo,Delantero centro,20/01/2002 (18),Francia,"1,78",derecho,01/07/2020,FC Paris Saint-Germain U19,30/06/2022,729,1.000.000
+35,Kenny Nagera,Delantero centro,21/02/2002 (18),Francia,,-,-,-,30/06/2023,,-
