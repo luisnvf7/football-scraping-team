@@ -2,6 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+from datetime import datetime
+
+
 headers = {'User-Agent':
            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'}
 
@@ -17,19 +20,22 @@ tbody = table.find("tbody")
 
 tbody_tr = tbody.find_all("tr")
 
-nombres = []
+jugadores = []
 posicion = []
+fecha_edad = []
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
         if td == 1:
             for td_name in tr.find_all("td")[td].find_all("td", class_="hauptlink"):
-                nombres.append(td_name.find("a").get_text())
+                jugadores.append(td_name.find("a").get_text())
                 for td_position in tr.find_all('td')[td].find_all('tr')[1:]:
                     posicion.append(td_position.text)
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all('td', class_='zentriert'))):
+        if td == 1:
+            fecha_edad.append(tr.find_all('td', class_='zentriert')[td].text.strip())
         if td == 2:
             print(tr.find_all('td', class_='zentriert')[td].img["title"])
         elif td == 3:
@@ -50,3 +56,6 @@ for tr in tbody_tr:
             print(td.text.split(" ")[0] + ".000")
         print("")
 
+print( str ((datetime.strptime("2021-10-5", "%Y-%m-%d") - datetime.strptime("2019-10-5", "%Y-%m-%d"))).split(" ")[0])
+
+print(fecha_edad)
