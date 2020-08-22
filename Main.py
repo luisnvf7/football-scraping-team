@@ -28,6 +28,7 @@ edad = ""
 nacionalidad = ""
 estatura = ""
 antes = ""
+valor = ""
 
 for tr in tbody_tr:
     for td in tr.find_all("td", class_=True)[1:]:
@@ -41,12 +42,23 @@ for tr in tbody_tr:
             estatura = td.text.replace("m", "").strip()
         elif td.find('a', class_="vereinprofil_tooltip"):
             antes = td.find('img')["alt"]
+        elif td["class"] == ["rechts", 'hauptlink']:
+            if "mill" in td.text:
+                valor = td.text.split(",")
+                valor = valor[0] + ".000.000"
+            elif "miles" in td.text:
+                valor = td.text.split(" ")
+                valor = valor[0] + ".000"
+                print(valor)
+            else:
+                valor = td.text
             array.append({
                 "nombre": nombre,
                 "año/edad": edad,
                 "nacionalidad": nacionalidad,
                 "estatura": estatura,
-                "antes": antes
+                "antes": antes,
+                "valor": valor
             })
 
 print(array)
