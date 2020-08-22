@@ -66,6 +66,10 @@ for tr in tbody_tr:
 
 print(str((datetime.strptime("2021-10-5", "%Y-%m-%d") - datetime.strptime("2019-10-5", "%Y-%m-%d"))).split(" ")[0])
 
+for num in range(len(fecha_fichado)):
+    print(str((datetime.strptime(fecha_contrato[num].replace("/", "-"), "%d-%m-%y") - datetime.strptime(fecha_fichado[num].replace("/", "-"), "%d-%m-%y"))).split(" ")[0])
+
+
 print(jugadores)
 print(posicion)
 print(fecha_edad)
