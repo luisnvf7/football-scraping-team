@@ -29,6 +29,7 @@ fecha_fichado = []
 club_anterior = []
 fecha_contrato = []
 valor_jugador = []
+dias_restantes = []
 
 for tr in tbody_tr:
     for td in range(1, len(tr.find_all("td"))):
@@ -69,9 +70,9 @@ print(str((datetime.strptime("2021-10-5", "%Y-%m-%d") - datetime.strptime("2019-
 for num in range(0, len(fecha_fichado)):
     print(num)
     if fecha_fichado[num] == "-":
-        print("-")
+        dias_restantes.append("-")
     else:
-        print(str((datetime.strptime(fecha_contrato[num].replace("/", "-"), "%d-%m-%Y") - datetime.strptime(fecha_fichado[num].replace("/", "-"), "%d-%m-%Y"))).split(" ")[0])
+        dias_restantes.append(str((datetime.strptime(fecha_contrato[num].replace("/", "-"), "%d-%m-%Y") - datetime.strptime(fecha_fichado[num].replace("/", "-"), "%d-%m-%Y"))).split(" ")[0])
 
 
 print(jugadores)
@@ -84,4 +85,5 @@ print(fecha_fichado)
 print(club_anterior)
 print(fecha_contrato)
 print(valor_jugador)
+print(dias_restantes)
 
