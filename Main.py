@@ -62,6 +62,7 @@ for tr in tbody_tr:
             })
 
 nombres = []
+position = []
 edad = []
 
 for tr in tbody_tr:
@@ -69,6 +70,9 @@ for tr in tbody_tr:
         if td == 1:
             for td_name in tr.find_all("td")[td].find_all("td", class_="hauptlink"):
                 nombres.append(td_name.find("a").get_text())
+            for td_position in tr.find_all('td')[td].find_all('tr')[1:]:
+                position.append(td_position.text)
 
-print(nombres)
+
+print(position)
 
