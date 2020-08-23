@@ -60,7 +60,7 @@ for tr in tbody_tr:
             fecha_contrato.append(tr.find_all('td', class_='zentriert')[td].text.strip().replace(".", "/"))
     for td in tr.find_all('td', class_='rechts hauptlink'):
         if "mill" in td.text:
-            valor_jugador.append(td.text.split(",")[0] + ".000.000")
+            valor_jugador.append((td.text.split(" ")[0] + "0.000").replace(",", "."))
         elif "miles" in td.text:
             valor_jugador.append(td.text.split(" ")[0] + ".000")
         else:
